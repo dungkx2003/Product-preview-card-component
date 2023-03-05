@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/*font-family: 'Fraunces', serif;
+font-family: 'Oswald', sans-serif;
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+    min-height: 133.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: 30px auto;
+    padding: 0 30px ;
+}
+.grid{
+    max-width: 700px;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img img{
+    max-width: 100%;
+    display: inherit;
+}
+.card_content{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h6.pro_content{
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 3px;       /*Tạo khoảng cách giữa các chữ*/
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+h2.pro_name{
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+p.pro_des{
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6em;
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+p.current_price{
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 25px;
+    padding-right: 25px;
+}
+p.old_price{
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through; /* Gachj ngang chữ muốn gạch*/
+}
+button.cta{
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 12px;
+    padding: 12px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+}
+button.cta:hover{
+    background-color: hsl(158, 36%, 23%);
+}
+button.cta img{
+    padding-right: 7px;
+}
+
+@media only screen and (max-width: 628px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card_container{
+        display: block;
+    }
+    h6.pro_content, h2.pro_name, p.pro_des, .price{
+        padding-bottom: 23px;
+    }
+}
+@media only screen and (max-width: 375px){
+   .container{
+        margin: 15px auto;
+        padding: 0 15px;
+   }
+   .img img{
+        max-height: 290px;
+   }
+   .card_content{
+        padding: 24px;
+   }
+    h6.pro_content, h2.pro_name, p.pro_des, .price{
+    padding-bottom: 23px;
+    }
+    h2.pro_name{
+        font-size: 28px;
+    }
+    p.pro_des{
+        font-size: 12px;
+    }
+    p.current_price{
+        font-size: 23px;
+    }
+    button.cta{
+        padding: 12px 0;
+        font-size: 13px;
+    }
+
+}
